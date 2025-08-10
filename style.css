@@ -1,9 +1,10 @@
 body {
-    font-family:'Times New Roman', Times, serif;
+    font-family: "Tajawal", sans-serif;
     background-color: #fff;
     display: flex;
     justify-content: center;
     margin-top: 40px;
+    font-weight: 700;
     /* background-color: #250555; */
 }
 table {
@@ -19,7 +20,7 @@ caption {
     font-size: 30px;
     padding: 10px;
     position: relative;
-    height: 30px;
+    height: 40px;
 }
 caption .add {
     position: absolute;
