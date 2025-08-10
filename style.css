@@ -1,0 +1,73 @@
+body {
+    font-family:'Times New Roman', Times, serif;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    /* background-color: #250555; */
+}
+table {
+    border-collapse: collapse;
+    width: 600px;
+    text-align: right;
+    margin: 100px;
+    /* background-color: #254555; */
+}
+caption {
+    background-color: #5A2CA0;
+    color: white;
+    font-size: 30px;
+    padding: 10px;
+    position: relative;
+    height: 30px;
+}
+caption .add {
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    background-color: white;
+    color: purple;
+    border-radius: 50%;
+    width: 24px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+th, td {
+    padding: 10px;
+    vertical-align: middle;
+}
+tr:nth-child(odd) {
+    background-color: #f8f8f8;
+}
+.done {
+    background-color: #9ff59f;
+}
+.icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    margin-left: 5px;
+    cursor: pointer;
+        }
+.edit { background-color: #3a7bd5; }
+.check { background-color: #28a745; }
+.delete { background-color: #8b0000; }
+.cancel { background-color: purple; }
+.date {
+    color: gray;
+    display: block;
+    font-size: 15px;
+}
+td.icons {
+    text-align: left;
+}
+tr {border-bottom: solid black 1px;}
+.add {padding: 6px; font-size: 20px;}
+td{font-size: larger;}
+tr:hover{box-shadow: 0px 4px 15px rgb(87, 87, 92);}
