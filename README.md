@@ -1,62 +1,62 @@
-# 📝 To-Do List (قائمة المهام)
+# 📝 To-Do List
 
-تطبيق بسيط لإدارة المهام باستخدام **JavaScript** و **LocalStorage**.  
-يتيح لك إضافة، تعديل، حذف، والتحكم في حالة المهام (منجزة أو غير منجزة).
-
----
-
-## 📌 المميزات
-- ➕ **إضافة مهمة جديدة** مع تاريخ الإنشاء تلقائيًا.
-- ✏ **تعديل المهمة** بسهولة.
-- ✅ **وضع علامة على المهمة كمكتملة** أو إلغاء إكمالها.
-- 🗑 **حذف المهام** مع تأكيد قبل الحذف.
-- 💾 **حفظ البيانات في LocalStorage** لضمان بقاء المهام حتى بعد إعادة تحميل الصفحة.
-- 📱 **تصميم بسيط** وسهل الاستخدام.
+A simple task management application using **JavaScript** and **LocalStorage**.  
+It allows you to add, edit, delete, and control the status of tasks (completed or not).
 
 ---
 
-## 📂 الملفات
-- **index.html** → صفحة العرض الرئيسية.
-- **style.css** → تنسيقات الصفحة.
-- **main.js** → كود JavaScript لإدارة المهام.
+## 📌 Features
+- ➕ **Add a new task** with automatic creation date.
+- ✏ **Edit tasks** easily.
+- ✅ **Mark tasks as completed** or undo completion.
+- 🗑 **Delete tasks** with confirmation before removal.
+- 💾 **Save data in LocalStorage** to keep tasks even after page reload.
+- 📱 **Simple and user-friendly design**.
 
 ---
 
-## 💻 طريقة الاستخدام
-1. افتح المشروع في متصفحك.
-2. أضف مهمة جديدة بالضغط على **+** في أعلى الجدول.
-3. عدّل المهمة بالنقر على أيقونة ✎.
-4. ضع علامة على المهمة كمكتملة بالنقر على **✓**.
-5. احذف المهمة بالنقر على **🗑**.
+## 📂 Files
+- **index.html** → Main display page.
+- **style.css** → Page styling.
+- **main.js** → JavaScript code for task management.
 
 ---
 
-## 🖼 مثال على الواجهة
-
-| المهمة               | التاريخ     | التحكم |
-|----------------------|-------------|--------|
-| الرياضة الصباحية     | 10/8/2025   | ✏ ✓ 🗑 |
-| انهاء كورس JavaScript| 10/8/2025   | ✏ ✓ 🗑 |
-
----
-
-## ⚙ كيفية عمل الكود
-- يتم حفظ جميع المهام في **localStorage** بصيغة JSON.
-- عند تحديث الصفحة يتم استدعاء `fillTable()` لإعادة تحميل البيانات.
-- يتم التعامل مع الأحداث (`onclick`) لتنفيذ عمليات الإضافة، الحذف، التعديل، أو التحديد.
+## 💻 How to Use
+1. Open the project in your browser.
+2. Add a new task by clicking **+** at the top of the table.
+3. Edit a task by clicking the ✎ icon.
+4. Mark a task as completed by clicking **✓**.
+5. Delete a task by clicking **🗑**.
 
 ---
 
-## 📜 مثال على تخزين البيانات
+## 🖼 Example Interface
+
+| Task                 | Date       | Controls |
+|----------------------|------------|----------|
+| Morning Exercise     | 10/8/2025  | ✏ ✓ 🗑 |
+| Finish JavaScript Course| 10/8/2025| ✏ ✓ 🗑 |
+
+---
+
+## ⚙ How the Code Works
+- All tasks are stored in **localStorage** in JSON format.
+- On page reload, `fillTable()` is called to reload the data.
+- Event handlers (`onclick`) are used to perform add, delete, edit, or check operations.
+
+---
+
+## 📜 Example Stored Data
 ```json
 [
     {
-        "title": "الرياضة الصباحية",
+        "title": "Morning Exercise",
         "date": "10/8/2025",
         "isDone": false
     },
     {
-        "title": "انهاء كورس الجافا سكربت",
+        "title": "Finish JavaScript Course",
         "date": "10/8/2025",
         "isDone": false
     }
@@ -65,8 +65,8 @@
 
 ---
 
-## 🛠 التحسينات المقترحة
-- إضافة دعم **بحث** داخل المهام.
-- إمكانية **تصنيف المهام** (عمل، دراسة، شخصي).
-- دعم **التصميم المتجاوب** بشكل أفضل للجوال.
-- إضافة **تخزين سحابي** لمزامنة المهام بين الأجهزة.
+## 🛠 Suggested Improvements
+- Add **search** support within tasks.
+- Ability to **categorize tasks** (Work, Study, Personal).
+- Better **responsive design** for mobile devices.
+- Add **cloud storage** to sync tasks across devices.
