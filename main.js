@@ -83,7 +83,6 @@ function fillTable() {
         let edit = prompt("تعديل المهمة",tasks[index].title);
         if(edit == true) {
             tasks[index].title = edit;
-            console.log(tasks)
             tasksStorage()
             fillTable()
         }
