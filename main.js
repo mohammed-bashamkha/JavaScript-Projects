@@ -26,11 +26,11 @@ function fillTable() {
     for(let task of tasks) {
 
         let contentTable = `
-        <tr>
+        <tr class="${task.isDone ? "done":""}">
             <td>${task.title}<span class="date">${task.date}</span></td>
             <td class="icons">
-            <span class="icon edit" id="edit-task">✎</span>
-            <span class="icon check" id="check-task">✓</span>
+            <span class="icon edit" id="edit-task" onclick="editTask(${index})">✎</span>
+            ${task.isDone ? `<span class="icon cancel" onclick="checkTask(${index})" id="check-task">✖</span>`:`<span class="icon check" onclick="checkTask(${index})" id="check-task">✓</span>`}
             <span class="icon delete" id="delete-task" onclick="deleteTask(${index})">🗑</span>
             </td>
         </tr>`
@@ -66,6 +66,22 @@ function fillTable() {
             tasks.splice(index,1)
             fillTable()
         }
+    }
+
+    // edit task
+    function editTask(index) {
+        let edit = prompt("تعديل المهمة",tasks[index].title);
+        if(edit == true) {
+            tasks[index].title = edit;
+            console.log(tasks)
+            fillTable()
+        }
+    }
+
+    // check task
+    function checkTask(index) {
+    tasks[index].isDone = !tasks[index].isDone;
+    fillTable();
     }
 
 fillTable()
