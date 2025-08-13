@@ -15,6 +15,9 @@ let tasks = [
         "isDone": false,
     },
 ];
+
+tasks = JSON.parse(localStorage.getItem("tasks"))
+
 function fillTable() {
     let index = 0;
     let table = document.getElementById("tasks");
@@ -55,15 +58,22 @@ function fillTable() {
                 "isDone": false,
             }
             tasks.push(createTask)
+            tasksStorage()
             fillTable()
         }else {window.alert("الحقل فارغ")}
     });
 }
+    // <--- Storage Function --->
+    function tasksStorage() {
+        let stringTasks = JSON.stringify(tasks)
+        localStorage.setItem("tasks",stringTasks)
+    }
     // delete task
     function deleteTask(index) {
         let isConfirm = confirm("هل أنت متأكد من حذف المهمة")
         if(isConfirm) {
             tasks.splice(index,1)
+            tasksStorage()
             fillTable()
         }
     }
@@ -74,6 +84,7 @@ function fillTable() {
         if(edit == true) {
             tasks[index].title = edit;
             console.log(tasks)
+            tasksStorage()
             fillTable()
         }
     }
@@ -81,6 +92,7 @@ function fillTable() {
     // check task
     function checkTask(index) {
     tasks[index].isDone = !tasks[index].isDone;
+    tasksStorage()
     fillTable();
     }
 
